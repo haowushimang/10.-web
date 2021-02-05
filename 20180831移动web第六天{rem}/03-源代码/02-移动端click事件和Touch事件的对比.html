@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<style>
+		div{
+			width: 200px;
+			height: 200px;
+			background-color: #ccc;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<script>
+		var div = document.querySelector('div');
+		// 滑动开始 手指按下就会触发
+		div.addEventListener('touchstart', function () {
+			console.log('touchstart');
+		});
+		//手指在元素移动的时候会触发
+		div.addEventListener('touchmove', function () {
+			console.log('touchmove');
+		});
+		//滑动结束 手指松开会触发
+		div.addEventListener('touchend', function () {
+			console.log('touchend');
+		});
+		//这是点击事件  在移动端click事件比touch事件要慢
+		//移动端click事件 有一个延迟问题 早期为了兼容双击（双击放大） 让单击事件延迟300ms左右 
+		//如果300ms以内单击了2次 就认为是双击操作 如果只有一次单击就是单击操作
+		// 由于click在移动端有延迟  一般在移动端使用touch事件来模拟click事件
+		div.addEventListener('click', function(){
+			console.log('click');
+		})
+	</script>
+</body>
+</html>

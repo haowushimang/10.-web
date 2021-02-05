@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    
+    .row .col {
+        height: 100px;
+        border: 1px solid #f40;
+        font-size: 20px;
+        text-align: center;
+        line-height: 100px;
+        float: left;
+    }
+    /*媒体查询：就相当于在CSS里面进行条件判断 判断屏幕宽度 设置不同的样式
+    语法：
+    @media(条件){
+    	条件成立执行的代码
+    }
+    类似js的if
+	 条件的写法 通常3种条件  注意值要带px单位
+	 		width:值;  宽度=值    成立   
+	 		min-width:值; 宽度 >= 值 成立
+	 		max-width:值; 宽度 <= 值 就成立
+    */
+  /*  1. 大电脑（笔记本 大台式机）：屏幕判断是>=1200都是大电脑 大屏幕
+  2. 小电脑（老的台式机）： 屏幕>=992 并且 < 1200          中屏幕
+  3. 平板电脑（ipad） : 屏幕 >= 768 并且 < 992             小屏幕
+  4. 手机 ： 屏幕 < 768                                   超小屏幕
+  	一行默认大屏幕 放4个  25%
+  中屏幕 放3个       33.33%
+  小屏幕 放2个   50%
+  超小屏幕 放1个  100% */
+   /* 大屏幕 */
+   @media(min-width: 1200px){
+      /* 大括号里面的样式只有条件成立才会生效 */
+   	.row .col {
+   		width:25%;
+   	}
+   }
+   /* 中屏幕 */
+   @media(min-width: 992px){
+      /* 大括号里面的样式只有条件成立才会生效 */
+   	.row .col {
+   		width:33.33%;
+   	}
+   }
+   /* 小屏幕 */
+   @media(min-width: 768px){
+      /* 大括号里面的样式只有条件成立才会生效 */
+   	.row .col {
+   		width:50%;
+   	}
+   }
+   /* 超小屏幕 */
+   @media(max-width: 768px){
+      /* 大括号里面的样式只有条件成立才会生效 */
+   	.row .col {
+   		width:100%;
+   	}
+   }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col">1</div>
+        <div class="col">2</div>
+        <div class="col">3</div>
+        <div class="col">4</div>
+    </div>
+</body>
+
+</html>

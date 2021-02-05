@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- 引入传入的CSS  -->
+	<!-- <link rel="stylesheet" href="demo.css"> -->
+	<!-- 1. 引入less文件  只是rel="stylesheet/less"   rel 表示链接关系当前链接的文档和当前页面的关系 -->
+	<link rel="stylesheet/less" href="demo.less">
+	<!-- 2. 引入less.js文件  用来编译less的js文件  编译器  -->
+	<!-- 因为编译器对 页面渲染有帮助的 这个js文件必须引在head里面-->
+	<script src="weijinsuo/lib/less/less.js"></script>
+	<!-- 3. 还要使用服务器来打开页面 -->	
+</head>
+<body>
+	<div id="header">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<a href="#">第一个列</a>
+				</div>
+				<div class="col">
+					<a href="#">第二个列</a>
+				</div>
+				<div class="col">
+					<a href="#">第三个列</a>
+				</div>
+				<div class="col">
+					<ul>
+						<li class="active">
+							<a href="#">被选中列表</a>
+						</li>
+						<li >
+							<a href="#">被选中列表</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="box">
+		第一个盒子
+	</div>
+	<div class="box1">
+		第二个盒子
+	</div>
+	<div class="box3">
+		第三个盒子
+	</div>
+	<div class="box4">
+		第四个盒子
+	</div>
+	<div class="box5">
+		第五个盒子
+	</div>
+	<div class="box6">
+		第六个盒子
+	</div>
+</body>
+</html>

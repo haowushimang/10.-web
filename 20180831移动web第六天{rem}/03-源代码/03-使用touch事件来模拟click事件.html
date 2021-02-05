@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<style>
+		div{
+			width: 200px;
+			height: 200px;
+			background-color: #ccc;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<script>
+		var div = document.querySelector('div');
+		//如果只触发 了touchstart 和 touchend 但是没有触发touchmove 就认为是单击事件
+		//如果触发了touchmove就不是单击事件
+		//默认表示没有触发touchmove
+		var flag = false;
+		// 滑动开始 手指按下就会触发
+		div.addEventListener('touchstart', function () {
+			console.log('touchstart');
+		});
+		//手指在元素移动的时候会触发
+		div.addEventListener('touchmove', function () {
+			console.log('touchmove');
+			flag = true;
+		});
+		//滑动结束 手指松开会触发
+		div.addEventListener('touchend', function () {
+			console.log('touchend');
+			if(flag == false){
+				console.log('没有触发touchmove  就是一个点击操作');
+			}else{
+				console.log('触发了touchmove  不是点击是滑动操作');
+			}
+			//在单击结束后重置这个变量的值
+			flag = false;
+		});
+	</script>
+</body>
+</html>

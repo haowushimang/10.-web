@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+    <style>
+    div {
+        width: 200px;
+        height: 200px;
+        background-color: #ccc;
+    }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+    var div = document.querySelector('div');
+    tap(div,function(){
+    	console.log('这是一个不延迟的click事件');
+    });
+    //移动端基本不会使用click事件 都是使用tap或者touch相关的事件
+    tap(div);
+    div.addEventListener('click', function(){
+    	console.log('这个是普通click事件');
+    });
+    //第一个参数的要加tap事件的dom元素 第二个是你事件要做的事情回调函数
+    function tap(dom, callback) {
+        var flag = false;
+        // 滑动开始 手指按下就会触发
+        dom.addEventListener('touchstart', function() {});
+        //手指在元素移动的时候会触发
+        dom.addEventListener('touchmove', function() {
+            flag = true;
+        });
+        //滑动结束 手指松开会触发
+        dom.addEventListener('touchend', function() {
+            if (flag == false) {
+                //是click事件 调用click事件的回调函数
+                //防止如果没有传入callback报错 判断一下如果传入了才调用不传就不调用
+                // if(callback){
+                // 	 callback();
+                // }
+                // 短路运算符 前面条件不成立 后面不执行
+                callback && callback();
+            }
+            //在单击结束后重置这个变量的值
+            flag = false;
+        });
+    }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>小米首页</title>
+    <!-- 1. 引入首页的样式文件  注意要把rel设置为rel="stylesheet/less" -->
+    <link rel="stylesheet/less" href="less/index.less">
+    <!-- 2. 引入编译器文件less.js -->
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+    <div class="layout">
+        <!-- 头部区域 -->
+        <header id="header">
+            <a href="#" class="icon-logo"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEwAAAAyCAYAAAD2vz2aAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MjQ2OUE2MkU0RTQ4MTFFNzgxOTZBRDJFQjk4Qjk0NjQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MjQ2OUE2MkY0RTQ4MTFFNzgxOTZBRDJFQjk4Qjk0NjQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpCOUQ0QkM2RjREQ0MxMUU3ODE5NkFEMkVCOThCOTQ2NCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpCOUQ0QkM3MDREQ0MxMUU3ODE5NkFEMkVCOThCOTQ2NCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PiL8gcIAAAF1SURBVHja7Ju/LwRRFEbf+FVsQ0dBdJKNSksUSqVCr6AhKxGVwn+gVUpQEI1So5XoZUOhEbKMDiESIeOTzPbvzpoxz5wvOd3duzsn++7cSXajZMU9OOeGXPmTiHtxIU7FoYh/oe+ZmPKsjSMJS1yY+RS7YrNDcTdi1Le4y4WbHrEorsRcUW8asrB2BsSxWEeYLVtiCWG2bIsJhPmnV+zkeV3/TZhLv2HzCLNlFWG2TIqRvHYZa97FR84XXEvnUSeZEft/LexZDIvXnIVFop6uCQ3RnaHHeBmO5FMBstrPjZdiTUyLlww9Bqs6w87FcobX9Vd56B+IZoZjXVlhP0f0qAwfJKS1ookw+w0HYaEFYQVs+j4ZE7Oed6o3sVfA00OphW2IBUN9S5xU+Uhad6A+ZhhDnyAMYQhDGMIQRhCGMIQhDGEEYQhDGMIQhjCCMIQhDGEIIwhDWFHCLP81vPOsezT0/BK3nj0tP1i59qxrGXrG3wIMAK5yNsqRAjAyAAAAAElFTkSuQmCC" alt=""></a>
+            <form action="#" class="form-search">
+                <i class="icon-search"></i>
+                <input type="search" placeholder="请输入要搜索的商品">
+            </form>
+            <!--  右侧登录 -->
+            <a href="#" class="login">登录</a>
+        </header>
+        <div class="box">
+            <div class="inner">
+                <ul>
+                    <li><a href="#">推荐</a></li>
+                    <li><a href="#">手机</a></li>
+                    <li><a href="#">电视</a></li>
+                    <li><a href="#">智能</a></li>
+                    <li><a href="#">笔记本</a></li>
+                    <li><a href="#">家电</a></li>
+                    <li><a href="#">双摄</a></li>
+                    <li><a href="#">全面屏</a></li>
+                    <li><a href="#">生活</a></li>
+                    <li><a href="#">盒子</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 轮播图区域 -->
+        <section id="slide">
+            <img src="images/l6.jpg" alt="">
+        </section>
+        <!-- mi -->
+        <nav id="nav">
+            <div class="mi">
+                <ul>
+                    <li>
+                        <img src="//i8.mifile.cn/v1/a1/6d64ef02-bb5c-da49-45cb-7d6861885b29!144x152.webp" lazy="loaded">
+                    </li>
+                    <li>
+                        <img src="//i8.mifile.cn/v1/a1/d29e748c-0177-5b4c-d2ab-401070713bac!144x152.webp" lazy="loaded">
+                    </li>
+                    <li>
+                        <img src="//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/9173298cc0297ce1803c43485e525358.jpg?thumb=1&w=144&h=152" lazy="loaded">
+                    </li>
+                    <li>
+                        <img src="//i8.mifile.cn/v1/a1/e560f98a-48bb-25a1-daa2-72bff8cc7c69!144x152.webp" lazy="loaded">
+                    </li>
+                    <li>
+                        <img src="//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/3df8f589521ea019b3b2d6231af17926.png?thumb=1&w=144&h=152" lazy="loaded">
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- 秒杀区域 -->
+        <!-- 商品区域 -->
+        <main id="main">
+            <section id="products">
+                <div class="left">
+                    <img src="//i8.mifile.cn/v1/a1/c897c4a6-9b16-8476-53c1-d53ed978eef0!358x508.webp" lazy="loaded">
+                </div>
+                <div class="right">
+                    <img src="//i8.mifile.cn/v1/a1/6634c877-77ad-3a84-80f7-d150754b4b54!358x252.webp" lazy="loaded">
+                    <a data-log_code="31waphomecells_auto_fill003008#t=ad&amp;act=other&amp;page=home&amp;page_id=26&amp;bid=3000169.3&amp;adp=217&amp;adm=8765" class="exposure items" style=" left: 3.62rem; top: 2.56rem;"><img src="//i8.mifile.cn/v1/a1/f555d958-35a6-c19a-eedd-ec7203c0259f!358x252.webp" lazy="loaded">
+                        <!---->
+                    </a>
+                </div>
+            </section>
+            <div class="md">
+                <img src="//i8.mifile.cn/v1/a1/0e2ff8b1-1ccc-bcb0-096a-391002935afe!720x280.webp" lazy="loaded">
+            </div>
+            <div class="md2">
+                <img class="md2" src="//i8.mifile.cn/v1/a1/3ec92a36-f85a-476b-cd61-dbd35d6af2ca!720x440.webp" lazy="loaded">
+            </div>
+            <div class="md3">
+                <ul class="left">
+                    <li>
+                        <img class="big" src="//i8.mifile.cn/v1/a1/d5c8ea24-5290-46e0-8064-7634b4cbad70!360x360.webp" lazy="loaded">
+                        <p>小米Max 2</p>
+                        <p class="car">6.44"大屏，5300mAh大电量</p>
+                        <span>¥1199</span>
+                        <del>¥1399</del>
+                    </li>
+                    <li> <img class="big" src="//i8.mifile.cn/v1/a1/e7853ea5-1260-6cb2-91ed-2c539a87db0a!360x360.webp" lazy="loaded">
+                        <p>小米6X</p>
+                        <p class="car">轻薄美观的拍照手机</p>
+                        <span>¥1299起</span>
+                        <del>¥1499</del>
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <!-- 底部区域 -->
+        <footer id="footer">
+            <ul>
+                <li>
+                    <a href="#"><img src="  https://m.360buyimg.com/mobilecms/jfs/t15145/137/2502885754/3106/de5e0b14/5aa10cd2N46f18ce6.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="  https://m.360buyimg.com/mobilecms/jfs/t15145/137/2502885754/3106/de5e0b14/5aa10cd2N46f18ce6.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="  https://m.360buyimg.com/mobilecms/jfs/t15145/137/2502885754/3106/de5e0b14/5aa10cd2N46f18ce6.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img src="  https://m.360buyimg.com/mobilecms/jfs/t15145/137/2502885754/3106/de5e0b14/5aa10cd2N46f18ce6.png" alt=""></a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+    <!-- 3. 引入首页的js文件 -->
+    <script src="js/index.js"></script>
+</body>
+
+</html>

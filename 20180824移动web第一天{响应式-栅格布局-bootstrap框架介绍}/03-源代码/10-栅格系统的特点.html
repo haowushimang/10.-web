@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <style>
+    .row > div {
+        height: 50px;
+        border: 1px solid #f40;
+    }
+    </style>
+</head>
+<body>
+	<div class="row">
+		<!-- 当有2个或更多屏幕的宽度是一致的时候 使用最小的屏幕 让他向上兼容
+		因为媒体查询 > 768 -->
+		<!-- div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">1</div>
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">2</div>
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">3</div>
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">4</div> -->
+		<!-- 注意xs档次其实没有媒体查询 可以在任意屏幕生效 如果需要所有屏幕列数一样就使用xs就可以 -->
+		<!-- 但是如果同时写了xs 和sm 或者md lg 只要后面屏幕生效了都会覆盖xs的样式 
+		如果写了别的档次 xs就表示默认768以下生效超小屏幕生效-->
+		<div class="col-xs-3">1</div>
+		<div class="col-xs-3">2</div>
+		<div class="col-xs-3">3</div>
+		<div class="col-xs-3">4</div>
+	</div>
+</body>
+</html>

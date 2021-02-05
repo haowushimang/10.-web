@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<style>
+		div{
+			width: 200px;
+			height: 200px;
+			background-color: #ccc;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<script>
+		var div = document.querySelector('div');
+		// 滑动开始 手指按下就会触发
+		div.addEventListener('touchstart', function () {
+			console.log('touchstart');
+		});
+		//手指在元素移动的时候会触发
+		div.addEventListener('touchmove', function () {
+			console.log('touchmove');
+		});
+		//滑动结束 手指松开会触发
+		div.addEventListener('touchend', function () {
+			console.log('touchend');
+		});
+		//触摸中断会触发的事件 出现意外情况 来电话短信等会触发的事件用的很少
+		div.addEventListener('touchcancel', function(){
+
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 1. 引入bootstrap的css -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <style>
+    	/*固定宽度且居中容器*/
+    	/*container跟随屏幕变化而变化*/
+    	/*屏幕宽度是》1200  容器宽度1170
+    	> 992  宽度970
+    	> 768  宽度750
+    	< 768  宽度默认100%*/
+    	/*container也是一个响应式的容器*/
+    	.container{
+    		height: 100px;
+    		border:1px solid #f40;
+    	}
+    	/*全屏容器*/
+    	.container-fluid{
+    		height: 100px;
+    		border:1px solid #0f0;
+    	}
+    	/*两个容器都是有左右15px内间距*/
+    </style>
+</head>
+
+<body>
+	<!-- 容器不能嵌套 -->
+    <div class="container">
+       container容器
+       
+    </div>
+    <div class="container-fluid">
+        container-fluid容器
+    </div>
+    <!-- 如果只使用样式不使用JS 可以不引人JS -->
+</body>
+
+</html>

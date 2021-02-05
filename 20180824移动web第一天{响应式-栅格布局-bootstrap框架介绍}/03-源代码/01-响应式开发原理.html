@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    
+    .row .col {
+        height: 100px;
+        border: 1px solid #f40;
+        font-size: 20px;
+        text-align: center;
+        line-height: 100px;
+        float: left;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col">1</div>
+        <div class="col">2</div>
+        <div class="col">3</div>
+        <div class="col">4</div>
+    </div>
+    <!-- 	1. 大电脑（笔记本 大台式机）：屏幕判断是>1200都是大电脑 大屏幕
+   2. 小电脑（老的台式机）： 屏幕>992 并且 < 1200          中屏幕
+   3. 平板电脑（ipad） : 屏幕 > 768 并且 < 992             小屏幕
+   4. 手机 ： 屏幕 < 768                                   超小屏幕
+	一行默认大屏幕 放4个  25%
+   中屏幕 放3个       33.33%
+   小屏幕 放2个   50%
+   超小屏幕 放1个  100%-->
+    <script>
+    // 如果需要屏幕宽度变化马上改变布局 需要监视屏幕变化事件
+    window.addEventListener('resize',response);
+    //页面加载马上调用
+    response();
+     function response() {
+        // 3. 获取所有col
+        var cols = document.querySelectorAll('.col');
+        // 1. 获取屏幕的宽度
+        var windowWidth = document.documentElement.offsetWidth;
+        // 2. 判断的当前屏幕宽度是属于哪种屏幕
+        if (windowWidth > 1200) {
+            //大屏幕
+            for (var i = 0; i < cols.length; i++) {
+                cols[i].style.width = '25%';
+            }
+        } else if (windowWidth > 992) {
+            //中屏幕
+            for (var i = 0; i < cols.length; i++) {
+                cols[i].style.width = '33.33%';
+            }
+        } else if (windowWidth > 768) {
+            //小屏幕
+            for (var i = 0; i < cols.length; i++) {
+                cols[i].style.width = '50%';
+            }
+        } else if (windowWidth < 768) {
+            //超小屏幕
+            for (var i = 0; i < cols.length; i++) {
+                cols[i].style.width = '100%';
+            }
+        }
+    }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+    	margin: 0px;
+    	padding: 0px;
+    }
+    div {
+        width: 200px;
+        height: 200px;
+        background-color: #ccc;
+    }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+    	var div = document.querySelector('div');
+    		 // 开始的Y  移动中的Y  移动距离Y  之前位移到的位置
+    	var startY = moveY = distanceY = currentY =  0;
+    	// 1. 添加滑动开始事件
+    	div.addEventListener('touchstart', function (e) {
+    		// 在手机上屏幕和视口和页面宽高都一样 所以e.touches[0].clientY  e.touches[0].pageY  e.touches[0].screenY 都是一样 通常使用标准视口的e.touches[0].clientY
+    		//获取滑动开始的Y的坐标
+    		startY = e.touches[0].clientY;
+    		// console.log(startY);
+    	});
+    	// 2. 添加滑动中的事件
+    	div.addEventListener('touchmove', function (e) {
+    		//由于滑动中的事件会一直触发所以moveY会一直变化
+    		moveY = e.touches[0].clientY;
+    		//滑动的记录是滑动中的坐标  -  滑动开始的坐标
+    		distanceY = moveY - startY;
+    		console.log(distanceY);
+    		// 有了距离就把距离设置给div的位移 因为位移距离本来就很少不需要加过渡
+    		// 注意如果要做运算要用()包起来先算再拼接
+    		div.style.transform = 'translate3D(0px,'+(currentY+distanceY)+'px,0px)';
+    	});
+    	div.addEventListener('touchend', function(){
+    		currentY += distanceY;
+    	});
+    </script>
+</body>
+
+</html>

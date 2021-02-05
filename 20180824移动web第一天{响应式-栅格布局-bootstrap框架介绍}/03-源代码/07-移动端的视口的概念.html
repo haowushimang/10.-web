@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- meta标签用来设置一些页面的配置 -->
+	<!-- width=device-width 表示设置宽度等于设备的宽度 -->
+	<!-- initial-scale=1 设置初始化缩放为1 -->
+	<!-- user-scalable=no 设置用户不允许缩放 -->
+	<!-- maximum-scale=1.0 最大缩放为1 -->
+	<!-- minimum-scale=1.0 最小的缩放为1 -->
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0">
+	<!-- meta:vp 按tab键 -->
+	<!-- 视口的作用就是为了让页面在移动端不会被缩放  只要是移动web开发都需要添加视口 -->
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	
+	<!-- 有一些页面不能让用户去手指缩放 -->
+</head>
+<body>
+	1. 什么是视口：视：可视 口： 窗口    视口就是可视窗口的意思 在页面开发中表示当前整个可视网页窗口
+	2. 视口有2种情况
+		1. PC端 视口和屏幕宽度一样 屏幕宽度是多少HTML的宽度宽度就是多少
+		2. 移动端 视口默认不会随着屏幕变化而变化而是一个默认值 在移动端默认视口的宽度980 意味着html宽度980 但是移动端屏幕宽度300-400 但是html页面的宽度980
+	3. 解决移动端视口大在屏幕显示的时候会缩放的问题
+		通过一个设置来改变移动端默认视口 让视口的宽度不要980应该和屏幕宽度一样
+</body>
+</html>

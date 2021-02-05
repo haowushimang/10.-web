@@ -1,0 +1,124 @@
+/* 1. 引入变量的less文件 */
+
+@import 'variables.less';
+
+/* 2. 引入函数的less文件 */
+
+//@import 'maxin.less';
+
+/* 头部区域样式 */
+
+#header {
+    border-bottom: 1px solid @border-color;
+    .row {
+        /* 一般如果要选择标签选择器带> 表示子代 */
+        >div {
+            border-right: 1px solid @border-color;
+            height: 40px;
+            line-height: 40px;
+            font-size: 12px;
+            &:last-child {
+                border-right: none;
+            }
+            a {
+                color: @a-color;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+
+/* 导航条区域的样式 */
+
+#nav {
+    background-color: #fff;
+    margin-bottom: 0;
+    /* 导航条头部样式 */
+    .navbar-header {
+        /* 移动端按钮的样式 */
+        .navbar-toggle {
+            margin-top: 23px;
+        }
+        /* 头部里面的品牌logo容器 */
+        .navbar-brand {
+            height: 80px;
+            /* 因为a有上下15px的padding 内容高度只有50px行高只有50px */
+            line-height: 50px;
+            > i {
+                font-size: 30px;
+                &.icon-icon {
+                    color: @main-color;
+                }
+                &.icon-logo {
+                    color: #333;
+                }
+            }
+        }
+    }
+    /* 导航条身体的ul的样式 */
+    .navbar-nav {
+        >li {
+            >a {
+                height: 80px;
+                line-height: 50px;
+                &:hover {
+                    border-bottom: 2px solid @main-color;
+                }
+            }
+            &.active {
+                >a {
+                    background-color: #fff;
+                    border-bottom: 2px solid @main-color;
+                }
+            }
+        }
+    }
+}
+
+
+/* 轮播图的样式 */
+
+#slide {
+    .large-image {
+        display: block;
+        height: 410px;
+        background-position: center center;
+    }
+    .small-image {
+        display: block;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+
+/* 特色介绍区域样式 */
+
+#featrue {
+    /* 父子元素直接的距离用padding */
+    padding: 40px 0;
+    .row {
+        >div {
+            margin-bottom: 10px;
+            .media {
+                > a {
+                    color: @a-color;
+                    text-decoration: none;
+                    &:hover {
+                        color: @main-color;
+                    }
+                }
+                /* 如果需要给手机单独修改样式  单独使用媒体查询修改手机上的样式 */
+                @media(max-width:768px) {
+                    >a {
+                        width: 220px;
+                        display: block;
+                        margin: 0px auto;
+                    }
+                }
+            }
+        }
+    }
+}

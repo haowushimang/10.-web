@@ -1,0 +1,47 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    //移动端一般会设置模型border-box 
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+li {
+    list-style: none;
+}
+
+input {
+    //去除内外输入框的内外边框
+    border: 0;
+    outline: 0;
+}
+
+img {
+    //去掉图片的边框
+    border: none;
+    ;
+    //图片底部有默认3px的间距
+    vertical-align: middle;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+/* 左右浮动的类名 */
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}

@@ -1,0 +1,24 @@
+实现小米移动端官网首页截图的部分布局   https://m.mi.com/   使用手机模拟的方式访问
+使用今天所学知识点 
+搭建移动端页面
+样式初始化
+添加视口
+背景图的定位和裁切 
+图片的缩放2倍
+flex布局
+百分比布局
+
+素材资源直接使用网络地址 检查元素复制图片网址
+宽高字体大小等直接检查元素看官网是多少就写多少
+重点还是提升移动web 写页面 切图的能力和掌握移动web切图的一些知识点
+
+
+https://m.jd.com/    京东
+http://i.meituan.com/  美团
+https://h5.ele.me/msite/ 饿了么
+https://m.vip.com/?source=www#!hash 唯品会
+https://h5.m.taobao.com/  淘宝
+https://m.suning.com/ 苏宁
+https://m.mi.com/  小米
+https://m.anjuke.com/gz/ 安居客
+http://m.ctrip.com/html5/ 携程

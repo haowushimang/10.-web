@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+	<style>
+		.row > div{
+				height: 50px;
+				border:1px solid #f40;
+		}
+	</style>
+</head>
+<body>
+	<!-- 栅格系统类似于表格table
+	有行 和列 
+	只要是有规律的行列盒子布局都可以用栅格系统
+	行.row 
+	列.col   有4种列的类名 分别表示4种屏幕生效的列
+		col-xs 超小屏幕
+		col-sm 小屏幕
+		col-md 中屏幕
+		col-lg 大屏幕
+	列 还有列数  一行最多分为12   如果超出12列就会换行
+	使用栅格的列要平均分 让列数是能被12整除
+	1列  col-xs-12
+	2列  col-xs-6
+	3列  col-xs-4
+	4列  col-xs-3
+	6列  col-xs-2
+	12列 col-xs-1-->
+	<div class="row">
+		<div class="col-xs-1">1</div>
+		<div class="col-xs-1">2</div>
+		<div class="col-xs-1">3</div>
+		<div class="col-xs-1">4</div>
+		<div class="col-xs-1">5</div>
+		<div class="col-xs-1">6</div>
+		<div class="col-xs-1">7</div>
+		<div class="col-xs-1">8</div>
+		<div class="col-xs-1">9</div>
+		<div class="col-xs-1">10</div>
+		<div class="col-xs-1">11</div>
+		<div class="col-xs-1">12</div>
+		<div class="col-xs-1">13</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">1</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-6">1</div>
+		<div class="col-xs-6">2</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-4">1</div>
+		<div class="col-xs-4">2</div>
+		<div class="col-xs-4">3</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-3">1</div>
+		<div class="col-xs-3">2</div>
+		<div class="col-xs-3">3</div>
+		<div class="col-xs-3">4</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<style>
+		html{
+			/*当如果需要实现屏幕适配不同屏幕有不同 大小 页面只要使用rem的地方都会跟着变化*/
+			/*实现屏幕自适应布局  只需要修改一个值html的font-size就可以实现全局缩放*/
+			font-size: 20px;
+		}		
+		h4{
+			font-size: 1rem;
+			width: 10rem;
+			height: 10rem;
+			background-color: #ccc;
+		}
+		p{
+			font-size: 0.8rem;
+			width: 10rem;
+			height: 10rem;
+			background-color: pink;
+		}
+		sub{
+			display: block;
+			font-size: 0.6rem;
+			width: 10rem;
+			height: 10rem;
+			background-color: yellowgreen;
+		}
+	</style>
+</head>
+<body>
+	<h4>
+		标题
+	</h4>
+	<p>段落</p>
+	<sub>超小</sub>
+</body>
+</html>

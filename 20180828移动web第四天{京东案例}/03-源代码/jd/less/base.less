@@ -1,0 +1,72 @@
+/* 京东的主体颜色 */
+
+@main-color: #de181b;
+
+/* 样式初始化文件 */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    /* 移动端一般会设置盒模型为border-box 防止边框和padding撑大盒子超出屏幕宽度出现滚动条 */
+    box-sizing: border-box;
+    /*移动端a标签按住的高亮背景色 设置透明即可*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+li {
+    list-style: none;
+}
+
+input {
+    /* 去除输入框的内外边框 */
+    border: 0;
+    outline: 0;
+}
+
+img {
+    /* 去掉图片的边框 */
+    border: none;
+    /* 去掉图片底部3px的间距 */
+    vertical-align: middle;
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+
+/* 清除浮动的公共类 */
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+/* 左右浮动的类名 */
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.bl {
+    border-left: 1px solid #ccc;
+}
+
+.bt {
+    border-top: 1px solid #ccc;
+}
+
+.bb {
+    border-bottom: 1px solid #ccc;
+}
+
+.br {
+    border-right: 1px solid #ccc;
+}

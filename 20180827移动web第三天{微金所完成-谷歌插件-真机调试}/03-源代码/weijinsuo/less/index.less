@@ -1,0 +1,386 @@
+/* 1. 引入变量的less文件 */
+@import 'variables.less';
+
+/* 2. 引入函数的less文件 */
+
+//@import 'maxin.less';
+
+/* 头部区域样式 */
+#header{
+	border-bottom: 1px solid @border-color;
+	.row{
+		/* 一般如果要选择标签选择器带> 表示子代 */
+		>div{
+			border-right: 1px solid @border-color;
+			height: 40px;
+			line-height: 40px;
+			font-size: 12px;			
+			&:last-child{
+				border-right: none;
+			}
+			a{
+				color:@a-color;
+				text-decoration: none;
+				img{
+					display: none;
+					position: absolute;
+					z-index:1000;
+					left: 50%;
+					transform:translateX(-50%);
+				}
+				&:hover{
+					img{
+						display:block;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* 导航条区域的样式 */
+
+#nav{
+	background-color: #fff;
+	margin-bottom: 0;
+	/* 设置导航条的距离顶部定位为0 */
+	top: 0px;
+	/* 设置定位层级 */
+	z-index: 999;
+	/* 由于添加了固定定位会没有默认100%的宽度 需要手动设置宽度 */
+	width: 100%;
+	/* 导航条头部样式 */
+	.navbar-header{
+		/* 移动端按钮的样式 */
+		.navbar-toggle{
+			margin-top: 23px;
+		}
+		/* 头部里面的品牌logo容器 */
+		.navbar-brand{
+			height: 80px;
+			/* 因为a有上下15px的padding 内容高度只有50px行高只有50px */
+			line-height: 50px;
+			> i{
+				font-size: 30px;
+				&.icon-icon{
+					color:@main-color;
+				}
+				&.icon-logo{
+					color:#333;
+				}
+			}
+		}		
+	}
+	/* 导航条身体的ul的样式 */
+	.navbar-nav{
+		>li{
+			>a{
+				height: 80px;
+				line-height: 50px;
+				&:hover{
+					border-bottom: 2px solid @main-color;
+				}
+			}
+			&.active{
+				>a{
+					background-color: #fff;
+					border-bottom: 2px solid @main-color;
+				}
+			}
+		}
+	}
+}
+
+
+/* 轮播图的样式 */
+#slide{
+	.large-image{
+		display: block;
+		height: 410px;
+		background-position: center center;
+	}
+	.small-image{
+		display: block;
+		img{
+			width: 100%;
+		}
+	}
+}
+
+/* 特色介绍区域样式 */
+#featrue{
+	/* 父子元素直接的距离用padding */
+	padding: 40px 0;
+	.row {
+		>div{
+			margin-bottom: 10px;
+			.media{
+				> a{
+					color:@a-color;
+					text-decoration: none;
+					&:hover{
+						color:@main-color;
+					}
+				}
+				/* 如果需要给手机单独修改样式  单独使用媒体查询修改手机上的样式 */
+				@media(max-width:768px){
+					>a{
+						width: 220px;
+						display: block;
+						margin: 0px auto;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/* 立即预约样式 */
+
+#booking{
+	border-top: 1px solid @border-color;
+	border-bottom: 1px solid @border-color;
+	padding: 20px 0;
+}
+
+
+/* 产品推荐区域样式 */
+#products{
+	padding: 40px 0;
+	background-color: #eee;
+	.ul-wrapper{
+		overflow: auto;
+		/* 标签页标题的样式 */
+		.nav-tabs{
+			width: 600px;
+			>li{
+				&.active{
+					>a{
+						background-color: transparent;
+						border-color: transparent;
+						border-bottom: 3px solid @main-color;
+						/* 被选中的li的a的hover边框颜色 */
+						&:hover{
+							border-bottom-color: @main-color;
+						}
+					}
+				}
+				>a{
+					color:@a-color;
+					font-size: 16px;
+					&:hover{
+						border-color: transparent;
+					}
+				}
+			}
+		}
+	}	
+	/* 标签页内容的样式 */
+	.tab-content{
+		.tab-pane{
+			>.row{
+				>div{
+					margin-top: 20px;
+					.product{
+						background-color: #fff;
+						display:flex;
+						position: relative;
+						&.red{
+							background-color: @main-color;
+							color:#fff;
+							&::before{
+								/* 单独给红色的盒子添加一个字体图标 指定图标的编码和字体 */
+								content:"\e915";
+								font-family: 'itcast';
+								font-size: 30px;
+								position: absolute;
+								left: 0px;
+								top: -6px;
+							}
+						}
+						.product-left{
+							flex:1;
+							height: 160px;
+							>h4{
+								text-align: center;
+								line-height: 30px;
+							}
+							>.row{
+								margin: 0;
+								>div{
+									margin-bottom: 10px;
+									/* 单独给中屏幕的时候去掉列的左右padding 让列的内容大一点能够放下文字 */
+									@media(min-width:992px) and (max-width:1196px){
+										padding: 0;
+									}
+									/* iphone5以下单独处理 */
+									@media(max-width:320px){
+										padding: 0 10px;
+									}
+									>p{
+										margin-bottom: 0;
+									}
+									&:nth-child(2n){
+										text-align: right;
+									}
+								}
+							}
+						}
+						.product-right{
+							width: 120px;
+							border-left: 1px dashed @border-color;
+							height: 160px;
+							/* 使用伸缩盒子 主轴垂直 方向 让内容主轴居中 */
+							display:flex;
+							flex-direction:column;
+							justify-content: center;
+							align-items:center;
+							position: relative;
+							>p{
+								margin-bottom: 0;								
+								/* 行高只能让单行文本居中 */
+								/* line-height: 160px; */
+								strong{
+									font-size: 30px;
+								}
+							}
+							&::before,&::after{
+								content:'';
+								width: 16px;
+								height: 16px;
+								background-color: #eee;
+								border-radius:50%;
+								position: absolute;
+								left: -8px;
+							}
+							&::before{
+								top: -8px;
+							}
+							&::after{
+								bottom: -8px;
+							}
+							.tooltips{
+								text-align: center;
+								position: absolute;
+								width: 100%;
+								top: 20px;
+								.tip-red{
+									border:1px solid @main-color;
+									color:@main-color;
+									padding: 5px;
+								}
+								.tip-green{
+									border:1px solid green;
+									color:green;
+									padding: 5px;
+								}
+								.tooltip-inner{
+									background-color: @main-color;
+								}
+								.tooltip-arrow{
+									border-top-color: @main-color;	
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/* 新闻区域样式 */
+#news{
+	padding: 40px 0;
+	.row{
+		>div{
+			>h4{
+				line-height: 40px;
+				text-align: center;
+				border-bottom: 1px dashed @border-color;
+				position: relative;
+				&:after{
+					content:'';
+					display: block;
+					width: 10px;
+					height: 10px;
+					border-radius:50%;
+					border:1px solid @border-color;
+					position: absolute;
+					right: -10px;
+					bottom: -5px;
+				}
+			}
+			.nav-tabs{
+				border-bottom: 0;
+				padding-left: 2px;
+				>li{	
+					/* 针对小和超小屏幕让新闻的图标 每个等比例划分 */
+					@media(max-width:992px){
+						width: 25%;						
+					}				
+					>a{
+						border-radius:50%;
+						color:#ccc;
+						margin: 0px auto 20px;
+						width: 60px;						
+						>i{
+							font-size: 30px;
+						}
+						&:hover{
+							background-color: @main-color;
+						}
+					}
+					&.active{
+						>a{
+							background-color: @main-color;
+						}
+					}
+				}
+			}
+			.tab-content{
+				.tab-pane{
+					>ul{
+						>li{
+							list-style: none;
+							line-height: 40px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* 合作伙伴样式 */
+#partner{
+	.container{
+		>h3{
+			text-align: center;
+		}
+		>ul{
+			display:flex;
+			padding-left: 0;
+			>li{
+				flex:1;
+				list-style: none;
+				>a{
+					text-decoration: none;
+					color:@a-color;
+					&:hover{
+						color:@main-color;
+					}
+					>i{
+						font-size: 60px;
+						/* 针对移动端把图标的字体变小 */
+						@media(max-width:768px){
+							font-size: 32px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

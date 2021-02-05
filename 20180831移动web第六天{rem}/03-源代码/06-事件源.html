@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			width: 300px;
+			height: 300px;
+			background-color: yellowgreen;
+		}
+		.inner{
+			width: 300px;
+			height: 300px;
+			background-color: pink;
+		}
+		.sun{
+			width: 300px;
+			height:300px;
+			background-color: #ccc;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="inner">
+			<div class="sun">
+				子元素
+			</div>
+		</div>
+	</div>
+	<script>
+		var box = document.querySelector('.box');
+		// 捕获就是我给父元素添加事件 我可以捕获到里面任意子元素的点击操作
+		box.addEventListener('click', function (e) {
+			console.log(e);
+			//当前添加了事件的目标元素 当前box
+			console.log(e.currentTarget);
+			// 表示触发当前事件的真实目标元素  如果3个元素宽高一样只能够点击到最里面的元素sun
+			console.log(e.target);
+		});
+	</script>
+</body>
+</html>

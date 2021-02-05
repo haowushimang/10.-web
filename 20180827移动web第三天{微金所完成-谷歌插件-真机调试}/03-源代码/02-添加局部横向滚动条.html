@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0px;
+			padding: 0px;
+			box-sizing: border-box;
+		}
+		/*给要滚动的父元素添加overflow:auto 给滚动的父元素添加一个局部滚动条*/
+		.box .inner{
+			overflow: auto;
+		}
+		/*给ul设置宽度 这个宽度一定要比父元素div要宽 只有子元素比父元素宽才有必要滚动*/
+		.box .inner ul{
+			width: 1000px;
+		}
+		.box .inner ul li{
+			list-style: none;
+			float: left;
+			width: 100px;
+		}
+	</style>
+</head>
+<body>
+	<!-- box里面的inner是会滚动的 -->
+	<div class="box">
+		<div class="inner">
+			<ul>
+				<li>第1个链接</li>
+				<li>第2个链接</li>
+				<li>第3个链接</li>
+				<li>第4个链接</li>
+				<li>第5个链接</li>
+				<li>第6个链接</li>
+				<li>第7个链接</li>
+				<li>第8个链接</li>
+				<li>第9个链接</li>
+				<li>第10个链接</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 页面其他内容不会滚动的 -->
+	<div class="box2">
+		fdsfsd
+	</div>
+</body>
+</html>

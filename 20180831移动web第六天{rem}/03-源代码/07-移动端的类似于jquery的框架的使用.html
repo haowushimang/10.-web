@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			width: 200px;
+			height: 200px;
+			background-color: #ccc;
+		}
+		.red{
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<!-- 1. 引入zepto -->
+	<script src="jd/lib/zepto-js/zepto.min.js"></script>
+	<script>
+		// zepto也是$符号 千万不能同时引入jquery和zepto
+		var div = $('div');
+		console.log(div);
+		div.on('click',function () {
+			console.log($(this));
+			$(this).addClass('red');
+			$.ajax({
+				url:'http://api.douban.com/v2/movie/in_theaters',
+				dataType:'jsonp',
+				success:function (data) {
+					console.log(data);
+				}
+			})
+		});
+	</script>
+</body>
+</html>

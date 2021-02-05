@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<style>
+		div{
+			width: 200px;
+			height: 200px;
+			background-color: #ccc;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<!-- <script src="jd/lib/zepto-js/zepto.min.js"></script> -->
+	<!-- selector支持了jquery的一些扩展选择器first eq -->
+	<!-- <script src="jd/lib/zepto-js/selector.js"></script> -->
+	<!-- fx是支持动画animate方法的包 -->
+	<!-- <script src="jd/lib/zepto-js/fx.js"></script> -->
+	<!-- touch是支持移动端一些滑动事件 tap 左右滑动等事件 -->
+	<!-- <script src="jd/lib/zepto-js/touch.js"></script> -->
+	<script src="jd/lib/定制版的zepto/zepto.js"></script>
+	<script>
+		var div = $('div:eq(0)');		
+		div.on('click',function () {
+			$(this).animate({
+				width:300,
+				height:300
+			},1000, 'ease-out',function () {
+				console.log('动画结束的回调函数');
+			})
+		});
+		//添加tap事件
+		div.tap(function () {
+			console.log('tap');
+		})
+		div.swipe(function () {
+			console.log('滑动');
+		})
+		div.swipeLeft(function () {
+			console.log('左滑');
+		})
+		div.swipeRight(function () {
+			console.log('右滑');
+		})
+		console.log(div);
+	</script>
+</body>
+</html>

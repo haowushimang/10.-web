@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width
+, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+    <style>
+    html {
+        font-size: 100px;
+    }
+    
+    body {
+        font-size: 16px;
+    }
+    /* 样式初始化文件 */
+    
+    * {
+        margin: 0px;
+        padding: 0px;
+        /* 移动端一般会设置盒模型为border-box 防止边框和padding撑大盒子超出屏幕宽度出现滚动条 */
+        box-sizing: border-box;
+        /*移动端a标签按住的高亮背景色 设置透明即可*/
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+    
+    li {
+        list-style: none;
+    }
+    
+    input {
+        /* 去除输入框的内外边框 */
+        border: 0;
+        outline: 0;
+    }
+    
+    img {
+        /* 去掉图片的边框 */
+        border: none;
+        /* 去掉图片底部3px的间距 */
+        vertical-align: middle;
+    }
+    
+    a {
+        color: #666;
+        text-decoration: none;
+    }
+    
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: 3.75rem;
+    }
+    
+    li {
+        width: 0.9375rem;
+        height: 0.9375rem;
+    }
+    
+    li a {
+        display: block;
+        width: 0.9375rem;
+        height: 0.9375rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    li a img {
+        /*百分比布局只能改变宽度 但是高度无法自适应改变*/
+        width: 0.4rem;
+        height: 0.4rem;
+    }
+    
+    li a p {
+        font-size: 0.14rem;
+    }
+    /*rem实现作用就是当你变化屏幕宽度的时候 内容图片等也会跟着变化*/
+    /*假如375屏幕下 html的字体大小是100px  1rem = 100px 
+    当前375屏幕下 图片宽度是缩小一半就是40px == 0.4rem  相当于把之前写的px的单位的值 都除以100 得到当前对应的rem的值*/
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="jd/images/nav0.png" alt="">
+                    <p>京东分类</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="jd/images/nav1.png" alt="">
+                    <p>京东分类</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="jd/images/nav2.png" alt="">
+                    <p>京东分类</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="jd/images/nav3.png" alt="">
+                    <p>京东分类</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="jd/images/nav4.png" alt="">
+                    <p>京东分类</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="jd/images/nav5.png" alt="">
+                    <p>京东分类</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="jd/images/nav6.png" alt="">
+                    <p>京东分类</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="jd/images/nav7.png" alt="">
+                    <p>京东分类</p>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <script>
+    window.addEventListener('resize', setHtmlFontSize)
+    setHtmlFontSize();
+    function setHtmlFontSize() {
+        // 根据屏幕的宽度来改变根元素的字体大小的值
+        // 当前屏幕 / 标准的375屏幕 求得你当前屏幕是标准屏幕的多少倍  * 标准屏幕根元素的字体大小
+        // 当前屏幕的宽度 / 375 * 100
+        // 假如当前750/375 = 2 * 100 == 200px  
+        // 1. 当前屏幕的宽度
+        var windowWidth = document.documentElement.offsetWidth;
+        // 限制最大屏幕 和最小屏幕
+        if(windowWidth > 750){
+        		windowWidth = 750;
+        }else if(windowWidth < 320){
+        		windowWidth = 320;
+        }
+        //2. 标准屏幕的宽度
+        var StandardWidth = 375;
+        // 标准屏幕的html的字体大小
+        var StandardHtmlFontSize = 100;
+        //3. 当前屏幕需要设置的根元素的字体大小
+        var htmlFontSize = windowWidth / StandardWidth * StandardHtmlFontSize;        
+        //4. 把当前计算的html 字体大小设置到页面的html元素上就可以
+        document.querySelector('html').style.fontSize = htmlFontSize + 'px';
+    }
+    </script>
+</body>
+
+</html>

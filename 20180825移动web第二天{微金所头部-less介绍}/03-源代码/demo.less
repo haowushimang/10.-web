@@ -1,0 +1,123 @@
+/* 4. 导入  可以把别的less文件导入到当前less里面来 */
+/* 1. 引入变量的less文件 */
+@import 'variables.less';
+/* 2. 引入 函数的less文件 */
+@import 'maxin.less';
+
+
+/* 使用变量   定义和使用都需要带@*/
+.box{
+	width:@width;
+	height:@height;
+	border:1px solid #f40;
+	color:@mainColor;
+}
+
+.box1{
+	width:@width;
+	height:@height;
+	border:1px solid #0f0;
+	background-color: @mainColor;
+}
+
+
+
+
+.box3{
+	height: 50px;
+	/* 使用函数 */
+	.bordertb();
+
+}
+.box4{
+	height: 50px;
+	.bordertb();	
+}
+
+.box5{
+	height: 50px;
+	/* 调用带参数的函数 */
+	.bordertb();
+}
+.box6{
+	height: 50px;
+	/* 调用带参数的函数 */
+	.bordertb(5px,#ff0);
+}
+
+/* 3. 嵌套 */
+
+/* 传统的CSS嵌套 */
+#header{
+	border:5px solid #0f0;
+}
+#header .container{
+	width: 1170px;
+	margin: 0px auto;
+	padding: 0 15px;
+}
+#header .container .row{
+	margin-left: -15px;
+	margin-left: -15px;
+	height: 100px;
+}
+#header .container .row .col{
+	font-size: 20px;
+	color:red;
+	width: 33.33%;
+	float: left;
+}
+
+/* less的嵌套  嵌套规则和标签一样
+
+好处减少选择器名称的重复使用
+提供代码的阅读性 能够清晰看到父子元素直接层次关系
+*/
+
+#header{
+	border:5px solid #0f0;
+	.container{
+		width: 1170px;
+		margin: 0px auto;
+		padding: 0 15px;
+		.row{
+			margin-left: -15px;
+			margin-left: -15px;
+			height: 100px;
+			.col{
+				font-size: 20px;
+				color:red;
+				width: 33.33%;
+				float: left;				
+				a{
+					text-decoration: none;
+					color:red;	
+					/* &写在a里面就表示当前的a */
+					&::before{
+						content:'伪元素';
+					}				
+					&:hover{
+						color:yellowgreen;
+					}
+				}
+				> ul{
+					> li{
+						&.active{
+							list-style: none;
+						}
+					}
+					/* 交集选择器 */
+					li.active{
+
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/* 嵌套的关键字 & 在哪个选择器里面就表示谁  通常用在伪类 伪元素 交集选择器 + ~ 兄弟 等选择器*/
+
+
+

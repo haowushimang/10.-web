@@ -1,0 +1,299 @@
+/*头部css 开始-------------------------------------- */
+header{
+	height: 44px;
+	border-bottom: 1px solid #DDDDDD;
+	overflow: hidden;
+}
+header .left{
+	width: 60px;
+	height: 44px;
+	float: left;
+	color: #D3079E;
+	line-height: 44px;
+	text-indent: 10px;
+	font-size: 14px;
+	position: relative;
+}
+header .left:before{
+	content: '';
+	width: 0px;
+	height: 0px;
+	position: absolute;
+	top: 20px;
+	right: 8px;
+	border: 5px solid transparent;
+	border-top:5px solid #D3079E;
+}
+header .right{
+	width: 45px;
+	height: 44px;
+	float: right;
+}
+header .right:before{
+	content: '';
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	top: 10px;
+	right: 8px;
+	background: url(../images/icon/my.png);
+	-webkit-background-size: 25px;
+	background-size: 25px;
+}
+header .center{
+	margin: 0 45px 0 60px;
+	height: 44px;
+	line-height: 44px;
+	font-size: 18px;
+	text-align: center;
+	color: #000000;
+}
+/*头部css 结束-------------------------------------- */
+/* bannercss 开始-------------------------------------- */
+.focus {
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+.focus .fangfang {
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	text-align: center;
+}
+.focus .fangfang ul {
+	overflow: hidden;
+	height: 20px;
+	text-align: center;
+}
+.focus .fangfang ul li {
+	width: 6px;
+	height: 6px;
+	border: 1px solid #fff;
+	background-color: rgba(255,255,255,.7);
+	display: inline-block;
+	border-radius: 50%;
+	margin-left: 10px;
+	text-indent: -999px;
+	overflow: hidden;
+}
+.focus .fangfang ul .on {
+	background: #fff;
+}
+.focus .bd {
+	position: relative;
+	z-index: 0;
+}
+.focus .bd li img {
+	width: 100%;
+}
+.focus .bd li a {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* 取消链接高亮 */
+}
+/* bannercss 结束-------------------------------------- */
+/* nav 开始-------------------------------------- */
+nav ul{
+	width: 100%;
+	margin-top: 8px;
+	overflow: hidden;
+	/*background: pink;*/
+	border-bottom: 1px solid #ddd;
+}
+nav ul li{
+	width: 33.333%;
+	float: left;
+	padding:0 4px;
+	margin-bottom: 8px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+nav ul li a{
+	display: block;
+	width: 100%;
+}
+nav ul li a img{
+	width: 100%;
+}
+/* nav 结束-------------------------------------- */
+/* piao 开始-------------------------------------- */
+.jipiao ul{
+	width: 100%;
+	/*background: pink;*/
+	overflow: hidden;
+}
+.jipiao ul li{
+	width: 25%;
+	float: left;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.jipiao ul li a{
+	width: 100%;
+	display: block;
+	
+}
+.jipiao ul li a img{
+	width: 100%;	
+}
+/* piao 结束-------------------------------------- */
+/* 推荐 开始-------------------------------------- */
+.tuijian ul{
+	width: 100%;
+	padding-top: 15px;
+	background: #F1F1F1;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 15px;
+	overflow: hidden;
+}
+.tuijian ul li{
+	width: 50%;
+	float: left;
+	background: #fff;
+}
+.tuijian ul li:nth-child(1){
+	border-right:1px solid #ddd; 
+	
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.tuijian ul li:nth-child(2),.tuijian ul li:nth-child(3){
+	
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	background-color: transparent;
+}
+.tuijian ul li:nth-child(3){
+	border-top: 1px solid #ddd;
+	margin-top: -2px;
+	background: #fff;
+}
+/* 推荐 结束-------------------------------------- */
+/* 热门活动 开始-------------------------------------- */
+.hot{
+	width: 100%;
+	padding-bottom: 15px;
+	background: #F1F1F1;
+	border-bottom: 1px solid #ddd;
+}
+.hot p{
+	width: 100%;
+	padding-top: 5px;
+	padding-left: 15px;
+	line-height: 30px;
+	background: #F1F1F1;
+	border-bottom: 1px solid #ddd;
+}
+.hot ul li{
+	border-bottom: 1px solid #ddd;
+	width: 100%;
+	background: #fff;
+}
+.hot ul li a{
+	display: block;
+	width: 100%;
+}
+.hot ul li a img{
+	width: 100%;
+}
+/* 热门活动 结束-------------------------------------- */
+/* 度周末 开始-------------------------------------- */
+.hpaayfix{
+	width: 100%;
+	height: 42px;
+}
+.hpaayfix p{
+	width: 50%;
+	height: 42px;
+	float: left;
+	text-align: center;
+	font-size: 14px;
+}
+.hpaayfix p span{
+	line-height: 42px;
+	display: inline-block;
+	padding: 0 10px;
+	cursor: pointer;
+}
+.hpaayfix p span.current{
+	border-bottom: 2px solid #D3079E;
+	color: #D3079E;
+}
+.happyfixdm ul{
+	margin-top: 2px;
+	width: 100%;
+	background: #F1F1F1;
+}
+.happyfixdm ul li{
+	width: 100%;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 15px;
+	background: #fff;
+}
+.happyfixdm ul li a{
+	width: 100%;
+}
+.happyfixdm ul li a img{
+	width: 100%;
+}
+.happyfixdm ul li span{
+	display: block;
+	width: 100%;
+	line-height: 25px;
+	font-size: 14px;
+	color: #000;
+}
+.happyfixdm ul li p{
+	width: 100%;
+	padding-bottom: 8px;
+}
+.happyfixdmfix{
+	display: none;
+}
+.more{
+	line-height: 30px;
+	text-align: center;
+	font-size: 13px;
+	border-bottom: 1px solid #ddd;
+	background: #fff;
+	margin-bottom: 15px;
+	position: relative;
+}
+.more:before{
+	content: '';
+	width: 6px;
+	height: 6px;
+	border-bottom: 2px solid #999;
+	border-right:2px solid #999;
+	position: absolute;;
+	top: 9px;
+	left:59%;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+/* 度周末 结束-------------------------------------- */
+.free ul{
+	width: 100%;
+	height: 30px;
+	background:#D3079E; 
+}
+.free ul li{
+	color: #fff;
+	line-height: 30px;
+	float: left;
+	font-size: 14px;
+	margin-right: 20px;
+	font-weight: bold;
+}
+.free ul li:nth-child(3){
+	float: right;
+	margin-right:10px;
+}
+.free ul li:nth-child(1){
+	margin-left:10px;
+}
+.free ul li a{
+	color: #fff;
+}

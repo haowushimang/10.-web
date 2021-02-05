@@ -1,0 +1,16 @@
+/* 2. 混入（Maxin） CSS里面自定义函数（把一些需要重复使用代码封装到一个函数里面） 
+函数在平常项目中用的不多 但是框架里面非常多
+*/
+/* 添加上下边框的函数 */
+/* 定义函数 */
+.bordertb{
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+
+/* 函数的参数也是@参数名 
+参数还可以设置默认值 @size:1px  @color:#ccc*/
+.bordertb(@size:2px,@color:#00f){
+	border-top: @size solid @color;
+	border-bottom: @size solid @color;
+}

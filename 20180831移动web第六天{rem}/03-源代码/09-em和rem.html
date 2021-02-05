@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<style>
+	html{
+		font-size: 20px;
+	}
+		.em{
+			/*浏览器默认字体16px  1em = 16px  10em =160px*/
+			/*当前元素如何设置了字体大小 就不会使用默认的大小20 1em =20px 10em=200px*/
+			font-size: 20px;
+			width: 10em;
+			height: 10em;
+			background-color: #ccc;
+		}
+		.rem{
+			font-size: 20px;
+			/*html元素的字体也是16px 1rem = 16px 10rem = 160px*/
+			/*但是你改变当前元素的字体大小不会改变rem的大小rem参照根元素html元素没变*/
+			width: 10rem;
+			height: 10rem;
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<div class="em">
+		em
+	</div>
+	<div class="rem">
+		rem
+	</div>
+</body>
+</html>

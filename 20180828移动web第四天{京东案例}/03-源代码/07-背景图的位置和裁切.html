@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			background-color: #ccc;
+		}
+		.box{
+			background-color: #fff;
+			width: 400px;
+			height: 400px;
+			padding: 100px;
+			box-sizing: border-box;
+			background-image: url(images/sprites.png);			
+			/*background-size: 200px 200px;*/
+			/*默认背景的位置是在padding左上角*/
+			/*修改背景图位置参照点 border-box  padding-box content-box*/
+			background-origin: content-box;
+			background-repeat: no-repeat;
+			/*背景的裁切： 控制在哪个盒模型的范围内有背景 border-box padding-box content-box*/
+			background-clip: content-box;
+
+			/*一般用在当盒子有padding或者边框的时候 同时里面有背景图需要改变背景的位置就会使用到值2个属性 这2个属性会结合在一起ongoing*/
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		文字
+	</div>
+</body>
+</html>

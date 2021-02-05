@@ -1,0 +1,1 @@
+function setHtmlFontSize(){var e=document.documentElement.offsetWidth;750<e?e=750:e<320&&(e=320);var t=e/375*100;document.querySelector("html").style.fontSize=t+"px"}window.addEventListener("resize",setHtmlFontSize),setHtmlFontSize();

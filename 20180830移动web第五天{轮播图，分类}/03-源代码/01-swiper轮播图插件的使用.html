@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+    <!-- 1. 引入swiper的CSS文件 -->
+    <link rel="stylesheet" href="jd/lib/swiper/css/swiper.css">
+    <style>
+    .swiper-container {
+        width: 600px;
+        height: 300px;
+    }
+    .swiper-pagination-bullet{
+    	background-color: #fff;
+    	border:1px solid #f00;
+    }
+    .swiper-pagination-bullet-active{
+    	background-color: #f00;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- swiper轮播图的结构  -->
+    <!-- 轮播图大容器 -->
+    <div class="swiper-container">
+        <!-- 轮播图图的图片容器 -->
+        <div class="swiper-wrapper">
+            <!-- 每一个轮播图项每一张图片 -->
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+        </div>
+        <!-- 小圆点 -->
+        <div class="swiper-pagination"></div>
+        <!-- 如果需要导航按钮左右箭头 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <!-- 如果需要滚动条 -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+    </div>
+    <!-- 2. 引入swiper的JS文件 -->
+    <script src="jd/lib/swiper/js/swiper.js"></script>
+    <script>
+    // 5. 调用JS的方法去初始化swiper插件
+    // new Swiper 就是swiper插件的构造函数 这个构造函数需要传入2个参数第一个参数是轮播图的大容器的选择器
+    // 	第二个参数是轮播图配置项
+    var mySwiper = new Swiper('.swiper-container', {
+    	//自动轮播图的参数
+        autoplay: {
+            //自动轮播图的间隔时间
+            delay: 1000,
+            //在手指滑动后是否要再次开启自动轮播图
+            disableOnInteraction: false,
+        },
+        //无缝轮播图参数
+        loop:true,
+        //初始化小圆点 注意页面需要有这个容器
+        pagination: {
+	        el: '.swiper-pagination',
+	     },
+	     //添加左右的箭头  注意页面需要有这个结构
+	     navigation: {
+	        nextEl: '.swiper-button-next',
+	        prevEl: '.swiper-button-prev',
+	     },
+	     //轮播图轮播的方向 默认水平horizontal 垂直vertical
+	     direction: 'horizontal',
+	     //添加滚动条 页面需要有这个结构
+	     // scrollbar: {
+	      //       el: '.swiper-scrollbar',
+	      //   }
+	      //添加轮播图效果 3D方块
+	      // effect: 'cube',
+	      // grabCursor: true,
+	      // cubeEffect: {
+	      //     shadow: true,
+	      //     slideShadows: true,
+	      //     shadowOffset: 20,
+	      //     shadowScale: 1,
+	      // },
+	      effect : 'fade',
+	      // effect : 'coverflow',
+			// slidesPerView: 3,
+			// centeredSlides: true,
+			// effect : 'flip',
+    });
+
+    </script>
+</body>
+
+</html>
